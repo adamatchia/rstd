@@ -16,6 +16,8 @@ void println(string message)
 	cout << message << endl;
 }
 
+namespace Console {
+	
 string read()
 {
 
@@ -24,6 +26,8 @@ string read()
 	return s;
 
 }
+
+} // namespace RStd
 
 
 } // namespace RStd

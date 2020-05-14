@@ -15,8 +15,14 @@ namespace RStd
 
 void println(string);
 
+
+namespace Console
+{
+
 string read();
 
-}
+} // namespace Console
+
+} // namespace RStd
 
 #endif
