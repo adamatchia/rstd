@@ -1,9 +1,17 @@
-# rstd
+# RStd: The General Purpose C++ Utility Library
 
 ## Introduction
 
 RStd is a C++ general utility (static) library that is intended to speed up the process of development by taking care of a lot of boiler plate code.
 
+RStd has a number of features:
+
+* Console Utilities
+* File Utilities
+* JSON / CSV / XML Parser
+* HTTP(S) Server
+* Networking Utilities
+* Web Scraping Utilities
 
 ## Using RStd
 
