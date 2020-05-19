@@ -5,5 +5,7 @@
 #include "FileUtils.h"
 #include "xml/XMLParser.h"
 #include "json/JSONParser.h"
+#include "http/http.h"
+#include "http/HttpUtils.h"
 
 #endif
