@@ -7,7 +7,6 @@ using namespace std;
 namespace RStd {
 namespace StringUtils {
 
-	void doSomething();
 	bool startsWith(string, string);
 	bool endsWith(string, string);
 	string replace(string, string, string, int);
