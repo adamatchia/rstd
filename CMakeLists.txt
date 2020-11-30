@@ -10,4 +10,4 @@ file (GLOB SUB_SOURCES "src/*/*.cc")
 
 list (APPEND SOURCES ${SUB_SOURCES})
 
-add_library(rstd STATIC ${SOURCES})
+add_library(rstd SHARED ${SOURCES})

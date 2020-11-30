@@ -7,5 +7,6 @@
 #include "json/JSONParser.h"
 #include "http/http.h"
 #include "http/HttpUtils.h"
+#include "string/StringUtils.h"
 
 #endif

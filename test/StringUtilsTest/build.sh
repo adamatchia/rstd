@@ -1,0 +1,1 @@
+g++ -o test main.cpp -I../../include -Wl,-rpath,/usr/lib/rcloud/librstd.so -std=c++11 -pthread
