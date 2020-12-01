@@ -8,6 +8,7 @@ namespace RStd {
 namespace StringUtils {
 
 	bool startsWith(string, string);
+	string invert(string);
 	bool endsWith(string, string);
 	string replace(string, string, string, int);
 	bool contains(string, string);
