@@ -7,6 +7,12 @@ echo Running Audit
 cd test
 
 cd StringUtilsTest
+sudo chmod 770 build.sh
+./build.sh
+cd ../
+
+cd CSVTest
+sudo chmod 770 build.sh
 ./build.sh
 cd ../
 
@@ -16,6 +22,10 @@ cd ../
 cd test
 
 cd StringUtilsTest
+./test
+cd ../
+
+cd CSVTest
 ./test
 cd ../
 

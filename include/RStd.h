@@ -8,5 +8,7 @@
 #include "http/http.h"
 #include "http/HttpUtils.h"
 #include "string/StringUtils.h"
+#include "data/Table.h"
+#include "csv/CSVParser.h"
 
 #endif
