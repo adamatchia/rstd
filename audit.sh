@@ -16,6 +16,11 @@ sudo chmod 770 build.sh
 ./build.sh
 cd ../
 
+cd ConsoleTest
+sudo chmod 770 build.sh
+./build.sh
+cd ../
+
 cd ../
 
 # Running tests
@@ -27,6 +32,10 @@ cd ../
 
 cd CSVTest
 ./test
+cd ../
+
+cd ConsoleTest
+./test g++ --compile --o main.cc
 cd ../
 
 cd ../

@@ -10,5 +10,6 @@
 #include "string/StringUtils.h"
 #include "data/Table.h"
 #include "csv/CSVParser.h"
+#include "console/ArgumentParser.h"
 
 #endif
