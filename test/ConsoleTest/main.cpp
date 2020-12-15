@@ -7,7 +7,6 @@ using namespace RStd;
 int main(int argc, char** argv) {
 
 
-
 	Console::ArgumentParser parser (argc, argv);
 
 	if (parser.hasFlag("compile") && parser.hasFlag("o")) {

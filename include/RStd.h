@@ -1,8 +1,6 @@
 #ifndef RSTD_RSTD_H_
 #define RSTD_RSTD_H_
 
-#include "ConsoleUtils.h"
-#include "FileUtils.h"
 #include "xml/XMLParser.h"
 #include "json/JSONParser.h"
 #include "http/http.h"
@@ -11,5 +9,7 @@
 #include "data/Table.h"
 #include "csv/CSVParser.h"
 #include "console/ArgumentParser.h"
+#include "console/ConsoleUtils.h"
+#include "file/FileUtils.h"
 
 #endif

@@ -6,14 +6,18 @@ using namespace std;
 namespace RStd
 {
 
-JSONParser::JSONParser()
-{
+	JSONObject::JSONObject() {}
 
-}
+	JSONParser::JSONParser()
+	{
 
-void JSONParser::parse(string data)
-{
+	}
 
-}
+	void JSONParser::parse(string data)
+	{
+
+		
+
+	}
 
 } // namespace RStd

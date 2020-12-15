@@ -11,8 +11,12 @@ namespace Data {
 	class Table {
 
 		public:
+
 			vector<vector<string>> data;
+
 			string stats();
+
+
 
 	};
 

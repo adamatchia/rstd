@@ -7,16 +7,26 @@ using std::string;
 namespace RStd
 {
 
-class JSONParser
-{
+	class JSONObject {
+	
+	public:
+		
+		int id = 0;
+		int parent = 0;
 
-public:
+		JSONObject();
 
-	JSONParser();
+	};
 
-	void parse(string);
+	class JSONParser {
 
-}; // class JSONParser
+	public:
+
+		JSONParser();
+
+		void parse(string);
+
+	}; // class JSONParser
 
 } // namespace RStd
 
