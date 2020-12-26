@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+	<title> 
+		Getting Started
+	 | RStd Documentation </title>
+
+
+	 <link rel="stylesheet" href="style.css">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+	<p><i>RSTD Documentation - <b>
+		Getting Started
+	</b></i></p>
+
+	<p><a href="index.html">Home</a></p>
+
+	<hr>
+
+	<!-- ===================== -->
+
+	<h1><i>Getting Started</i></h1>
+
+	<hr>
+
+	<h1>Installation</h1>
+
+	<h2>Installation with RCloud</h2>
+
+	Run the following using the rcloud shell:
+
+	<pre><code>
+rcloud app install librstd_dev
+	</code></pre>
+
+	<hr>
+
+	<h1>Compilation</h1>
+
+	<h2>Compiling Using RCloud Pkg-Config Tool</h2>
+
+	<pre><code>
+g++ `rcloud pkg-config include librstd_dev` -o myapp main.cc `rcloud pkg-config libs librstd_dev`
+	</code></pre>
+
+	<h2>Compiling Using Muon</h2>
+
+	<pre><code>
+muon c++ -s *.cc -l librstd_dev -o myapp
+	</code></pre>
+
+	<hr>
+
+	<h1>Using RStd</h1>
+<pre><code>
+#include &lt;RStd/RStd.h&gt;
+using namespace RStd;
+</code></pre>
+
+
+	<!-- ===================== -->
+
+
+
+</body>
+
+</html>

@@ -5,6 +5,8 @@
 #include <string>
 using std::string;
 
+#include <string/StringUtils.h>
+
 namespace RStd
 {
 
@@ -27,9 +29,31 @@ string getHeaderValue(httplib::Request& req, string name)
 string getCookie(httplib::Request& req, string name)
 {
 
-	string raw = HttpUtils::getHeaderValue(req, "Cookie");
+	if (!req.has_header("Cookies")) {
+		return "";
+	}
 
-	return raw;
+	string raw = req.get_header_value("Cookies");
+
+	vector<string> cookies_raw = StringUtils::split(raw, ';');
+
+	for (auto &c : cookies_raw) {
+		
+		c = StringUtils::trim(c);
+
+		vector<string> components = StringUtils::split(c, '=');
+
+		if (components.size() != 2) {
+			continue;
+		}
+
+		if (components.at(0) == name) {
+			return components.at(1);
+		}
+
+	}
+
+	return "";
 
 }
 

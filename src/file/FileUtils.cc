@@ -2,6 +2,8 @@
 
 #include <fstream>
 #include <filesystem>
+#include <iostream>
+#include <string/StringUtils.h>
 
 namespace fs = std::filesystem;
 
@@ -39,12 +41,28 @@ namespace FileUtils {
 
 	}
 
-	void write(string filename, string data) {
+	void write(string filename, string data, bool append) {
 
-		ofstream file (filename);
-		file << data;
+		ofstream file;
+
+		if (append) {
+			file.open(filename.c_str(), ios::app);
+		} else {
+			file.open(filename.c_str());
+		}
+
+		if (StringUtils::endsWith(data, "\n")) {
+			file << data.c_str();
+		} else {
+			file << data.c_str() << endl;
+		}
+
 		file.close();
 
+	}
+
+	void write(string filename, string data) {
+		return write(filename, data, false);
 	}
 
 	vector<string> ls(string path) {
@@ -58,5 +76,5 @@ namespace FileUtils {
 
 	}
 
-}
-}
+} // namespace FileUtils
+} // namespace RStd
