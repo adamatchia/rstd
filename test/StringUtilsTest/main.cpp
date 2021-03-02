@@ -187,5 +187,17 @@ int main() {
 
 	cout << "Test: RStd::StringUtils::toCurrency(string)" << endl;
 
+	// ==============================================
+
+
+	string random = StringUtils::randomString(50);
+
+	if (random.length() == 50) {
+		cout << "[  OK  ] ";
+	} else {
+		cout << "[  FAILED  ] ";
+	}
+
+	cout << "Test: RStd::StringUtils::random_string(int)" << endl;
 
 }

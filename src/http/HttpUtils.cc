@@ -5,7 +5,7 @@
 #include <string>
 using std::string;
 
-#include <string/StringUtils.h>
+#include <RStd.h>
 
 namespace RStd
 {

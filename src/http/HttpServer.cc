@@ -1,13 +1,20 @@
 #include <http/HttpServer.h>
+#include <http/HttpUtils.h>
+#include <http/http.h>
 
 #include <vector>
+#include <string>
 using namespace std;
+
 
 #include <string/StringUtils.h>
 
-HttpHandler::HttpHandler() {}
+namespace RStd
+{
 
-void HttpHandler::get_cookie(string name) {
+//HttpHandler::HttpHandler() {}
+	
+string HttpHandler::get_cookie(string name) {
 
 	if (!req.has_header("Cookies")) {
 		return "";
@@ -47,7 +54,7 @@ HttpServer::HttpServer(string host, int port) {
 
 void HttpServer::handle_func(string path, HttpHandler* handler) {
 
-	server.Get(path.c_str(), [](const httplib::Request &req, httplib::Response &res) {
+	server.Get(path.c_str(), [&handler](const httplib::Request &req, httplib::Response &res) {
 
 		handler->req = req;
 		handler->res = res;
@@ -59,9 +66,15 @@ void HttpServer::handle_func(string path, HttpHandler* handler) {
 		}
 
 		if (handler->response != "") {
-			res.set_content(handle->response.c_str(), handler->response_type);
+			res.set_content(
+				handler->response.c_str(),
+				(size_t)sizeof(handler->response.c_str()),
+				handler->response_type.c_str()
+			);
 		}
 
 	});
 
 }
+
+} // namespace RStd

@@ -25,6 +25,7 @@ namespace StringUtils {
 	string toCurrency(string);
 	int Atoi(string);
 	string Itoa(int);
+	string randomString(int);
 
 } // namespace StringUtils
 } // namespace rstd

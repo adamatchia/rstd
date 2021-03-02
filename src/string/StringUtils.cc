@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstdlib>
+#include <random>
+#include <algorithm>
 
 namespace RStd {
 namespace StringUtils {
@@ -443,6 +445,28 @@ namespace StringUtils {
 
 	string Itoa(int target) {
 		return to_string(target);
+	}
+
+	string randomString(int s) {
+
+		string possible_characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+		random_device rd;
+
+		mt19937 engine(rd());
+
+		uniform_int_distribution<> dist(0, possible_characters.size()-1);
+
+		string ret = "";
+
+		for(int i = 0; i < s; i++){
+	        int random_index = dist(engine); //get index between 0 and possible_characters.size()-1
+	        ret += possible_characters[random_index];
+	    }
+
+	    return ret;
+
+		 
 	}
 
 } // namespace StringUtils

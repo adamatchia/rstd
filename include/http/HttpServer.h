@@ -6,9 +6,14 @@ using namespace std;
 
 #include <http/http.h>
 
+namespace RStd
+{
+
 class HttpHandler {
 
 public:
+
+	HttpHandler();
 
 	string response;
 
@@ -17,9 +22,8 @@ public:
 	httplib::Request &req;
 	httplib::Response &res;
 
-	HttpHandler();
 
-	void get_cookie(string);
+	string get_cookie(string);
 
 	void send(string);
 
@@ -36,12 +40,14 @@ public:
 
 	httplib::Server server;
 
-	HttpServer(string, int);
-
 	void handle_func(string, HttpHandler*);
 
 	void listen_and_serve();
 
+	HttpServer(string, int);
+
 };
+
+} // namespace RStd
 
 #endif
